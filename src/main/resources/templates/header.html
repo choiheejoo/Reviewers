@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>header</title>
+    <link href="css/header.css" th:href="@{/css/header.css}" rel="stylesheet">
+    <style>
+        @media (max-width:769px){
+        *{font-size:1rem;
+        }
+
+        @media (min-width:529px) and (max-width:768px){
+        *{font-size:0.9rem;} .btn{font-size:0.9rem;}
+        }
+
+        @media (min-width:361px) and (max-width:528px){
+        *{font-size:0.8rem;} .btn{font-size:0.8rem;}
+        }
+        @media (max-width:360px){
+        *{font-size:0.7rem;} .btn{font-size:0.7rem;}
+        }
+
+    </style>
+</head>
+<body>
+<header class="bg-light shadow-sm">
+    <!-- nav -->
+    <nav
+            class="container d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-2 <!--  navbar-light --> ">
+        <!--  <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button> -->
+        <a class="navbar-brand font-weight-bold text-dark m-0"
+           href="/">REVIEWERS</a>
+
+
+        <ul
+                class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+            <li><a href="/review" class="nav-link px-3 link-dark">리뷰</a></li>
+            <li><a href="/communication" class="nav-link px-3 link-dark">자유게시판</a></li>
+        </ul>
+
+        <div class="text-end">
+            <button type="button" class="btn btn-outline-dark me-2"
+                    onclick="location.href='/login'">로그인</button>
+            <button type="button" class="btn btn-outline-dark"
+                    onclick="location.href='/join'">회원가입</button>
+        </div>
+
+        <!-- 검색 -->
+        <div class="container p-0 mt-3">
+            <form class="d-flex">
+                <input class="form-control col-xs-2 me-2" type="search"
+                       placeholder="Search" aria-label="Search">
+                <button class="btn btn-dark w-25 py-2" type="submit">검 색</button>
+            </form>
+        </div>
+        <!-- 토글 메뉴 -->
+        <div class="offcanvas offcanvas-start" tabindex="-1"
+             id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">REVIEWERS</h5>
+                <button type="button" class="btn-close text-reset"
+                        data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+        </div>
+    </nav>
+</header>
+</body>
+</html>

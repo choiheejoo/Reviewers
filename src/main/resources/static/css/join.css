@@ -1,0 +1,9 @@
+.cont{
+align-items: center;
+  height:70%;
+  width: 100%;
+  max-width: 500px;
+  padding: 15px;
+  padding-top:50px;
+  margin: auto;
+}

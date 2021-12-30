@@ -1,0 +1,11 @@
+@charset "UTF-8";
+
+@media (min-width: 680px) {
+	.navbar-toggler {
+		display:none;
+	}
+	.d-none{
+		display:block;
+	}
+
+	}
